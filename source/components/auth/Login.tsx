@@ -36,7 +36,11 @@ const Login = () => {
   return (
     <div className="p-5 flex flex-col items-center justify-center w-full gap-6 font-metropolis my-auto">
       <form onSubmit={submitFormHandler} className="w-full max-w-96">
-        <h1 className="text-3xl font-medium pb-1">Login</h1>
+        <h1 className="text-3xl font-medium pb-1 flex items-center">
+          <span className="text-highlight">Q</span>Ease
+          <span className="inline-block bg-white/50 w-2 h-2 rounded-full mx-3 mt-1"></span>
+          Login
+        </h1>
         <p className="text-base text-gray-500 pt-1">Enter your username and password to login</p>
         <label className="pb-1 pt-4 block opacity-80">Username</label>
         <input type="text" className="px-4 py-2.5 rounded-md w-full bg-white/30 " placeholder="Enter username" value={username} onInput={e => setUsername(e.currentTarget.value)} />
@@ -50,10 +54,6 @@ const Login = () => {
         <GoldenButton type="submit" loading={processing} className="mt-4">
           Login
         </GoldenButton>
-        <div className="mt-2 w-full justify-between items-center flex">
-        <Link href="/signup" className="text-sm block text-gray-500 underline hover:no-underline">Create a new account</Link>
-          <Link href="/" className="text-sm block text-gray-500 underline hover:no-underline">Home</Link>
-        </div>
       </form>
     </div>
   )
