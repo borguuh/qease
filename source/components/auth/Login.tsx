@@ -25,7 +25,6 @@ const Login = () => {
     console.log(res)
     if (res.detail) {
       toast.error("Invalid credentials. Please try again")
-      setPassword("")
     } else {
       toast.success("Logged in successfully")
       // saveToken(res.data.token)
