@@ -1,4 +1,6 @@
 "use client"
+import { motion } from "framer-motion";
+import { variant } from "../framer";
 import { FaPlus } from "react-icons/fa"
 import { useState, useRef, useEffect } from "react"
 
@@ -18,7 +20,7 @@ const QSet = ({ faq, i }: { faq: any, i: number }) => {
 	}, [showAnswer])
 
 	return (
-		<div className="border-b border-white/50 pb-6">
+		<motion.div custom={i} variants={variant} className="border-b border-white/50 pb-6">
 			<div className="flex gap-6 items-center justify-between font-semibold cursor-pointer" onClick={() => setShowAnswer(prev => !prev)}>
 				<div>{faq.question}</div>
 				<div className={"text-2xl duration-200 " + (showAnswer ? " rotate-[135deg]" : "")}><FaPlus /></div>
@@ -27,7 +29,7 @@ const QSet = ({ faq, i }: { faq: any, i: number }) => {
 				<div className="pt-5"></div>
 				{faq.answer}
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 export default QSet
