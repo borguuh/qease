@@ -14,7 +14,7 @@ const Hero = () => {
           Effortlessly manage queues with our innovative system.
         </motion.p>
         <motion.div initial={mIni} whileInView={mAni} transition={mTrans(.6)} className="">
-          <Link className="mt-8 flex sm:mt-10 px-12 py-3 sm:py-4 md:py-5 bg-highlight text-black rounded-full font-semibold shake" href="/login">Get Started</Link>
+          <Link className="mt-8 flex sm:mt-10 px-12 py-3 sm:py-4 md:py-5 bg-highlight text-black rounded-full font-semibold shake" href="/signup">Get Started</Link>
         </motion.div>
       </div>
       <div className="w-full flex items-center justify-center py-10 opacity-80">

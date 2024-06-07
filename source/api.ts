@@ -5,7 +5,7 @@ const generateLSSB = (limit = 10, skip = 0, sortBy = "createdAt:desc") => `?limi
 // Auth Routes
 export const registerURL = () => `${backendLocation}/register`
 export const registerAdminURL = () => `${backendLocation}/registerAdmin`
-export const loginURL = () => `${backendLocation}/login`
+export const loginURL = (username: string, password: string) => `${backendLocation}/login?username=${username}&password=${password}`
 export const refreshTokenURL = () => `${backendLocation}/refresh`
 export const logoutURL = () => `${backendLocation}/logout`
 

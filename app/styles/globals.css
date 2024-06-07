@@ -28,6 +28,7 @@
   *:disabled {
     opacity: .5;
     cursor: not-allowed;
+    animation: none !important;
   }
 
   html {
@@ -68,6 +69,14 @@
   input, textarea {
     outline: 0 none;
     background: transparent;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 1s ease-in-out 0s, color 1s ease-in-out 0s;
+    transition-delay: 5000s;
   }
 
   *::placeholder {

@@ -6,6 +6,11 @@ export const getToken = () => {
 	return cookie.get(tokenCookieName)
 }
 
+export const saveToken = (token: string) => {
+	const cookie = new Cookies()
+	cookie.set(tokenCookieName, token, { path: '/' })
+}
+
 const protect = async (vip: Function) => {
 	let validated
 	try { validated = await vip() }
